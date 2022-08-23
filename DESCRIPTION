@@ -1,0 +1,13 @@
+Package: LaTeXDatax
+Type: Package
+Title: A plugin for the Datax LaTeX package
+Version: 0.1.0
+Date: 2022-06-15
+Author: David Gustavsson <david.e.gustavsson@gmail.com>
+Maintainer: David Gustavsson <david.e.gustavsson@gmail.com>
+Description: Save individual data for use in LaTeX documents
+License: MIT + file LICENSE
+LazyData: TRUE
+Imports: pracma
+RoxygenNote: 7.2.1
+Encoding: UTF-8
