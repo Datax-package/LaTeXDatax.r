@@ -20,9 +20,9 @@ A function to store a number of data to file
 }
 \examples{
 datax(
-      "data.tex",
-      a=3, b="string", c=list(612.2,"nm"),
-      d=c(3.14159265358979323846264338327950288419, "", "\%.12f")
-     )
+    "data.tex",
+    a = 3, b = "string", c = list(612.2, "nm"),
+    d = list(3.14159265358979323846264338327950288419, "", "\%.12f")
+)
 
 }

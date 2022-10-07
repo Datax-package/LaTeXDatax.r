@@ -17,6 +17,15 @@ check : ${ARCHIVE}
 install : ${ARCHIVE}
 	R CMD install $<
 
+test : tests/show.pdf
+
+tests/show.pdf : tests/show.tex tests/data.tex
+	latexmk --xelatex --output-directory=tests $<
+
+tests/data.tex : tests/test.r R/LaTeXDatax.r
+	Rscript $<
+
 clean :
-	${RM} ${NAME}_*.tar.gz man/* test.tex NAMESPACE
+	${RM} ${NAME}_*.tar.gz man/* NAMESPACE
 	${RM} -R ${NAME}.Rcheck
+	${RM} -R tests/*.pdf tests/data.tex tests/*.log tests/*.aux tests/*.fls tests/*.fdb_latexmk tests/*.xdv
